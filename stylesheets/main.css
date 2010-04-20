@@ -1,0 +1,24 @@
+html,
+body {
+	font-family: Verdana, Helvetica, sans-serif;
+	text-align:center;
+	font-size:15;
+}
+#container
+{
+	margin:auto;
+	background-color: white;
+	margin-top:40px;
+	width:90%;
+	min-height:200px;
+	padding-top:20px;
+	border: #B6BED0 40px solid;
+}
+
+#maincol
+{
+	margin:auto;
+	position:relative;
+	width:60%;
+
+}
