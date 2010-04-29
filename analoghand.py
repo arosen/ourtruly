@@ -13,9 +13,9 @@ class Greeting(db.Model):
     content = db.StringProperty(multiline=True)
     toaddress = db.StringProperty(multiline=True)
     toaddress1 = db.StringProperty(multiline=True)
-    tocity = db.StringProperty(multiline=True)
-    tostate = db.StringProperty(multiline=True)
-    tozip = db.StringProperty(multiline=True)
+    tocity = db.StringProperty(multiline=False)
+    tostate = db.StringProperty(multiline=False)
+    tozip = db.StringProperty(multiline=False)
     date = db.DateTimeProperty(auto_now_add=True)
 
 class MainPage(webapp.RequestHandler):

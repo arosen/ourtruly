@@ -1,6 +1,7 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+	<script language="JavaScript" src="/js/gen_validatorv31.js" type="text/javascript"></script>
 </head>
   <body>
 
@@ -11,20 +12,102 @@
 	<b>Step 1</b>
 	Tell us what to write...
 	<p>
-	<form action="/confirm" method="post">
-	<textarea onfocus ="this.value=''" name="content" rows="15" cols="45">Type your note...</textarea>
+	<form action="/confirm" name="myform" method="post">
+	<textarea name="content" rows="15" cols="45">Type your note...</textarea>
 	<p>
 	<p>
 	<b>Step 2</b> Tell us who to send it to...
 	<p>
 	<input onfocus="this.value=''" type="text" name="toaddress" value="Address" size="40"/><br>
 	<input onfocus="this.value=''" type="text" name="toaddress1" value="Address" size="40"/><br>
-	<input onfocus="this.value=''" type="text" name="tocity" value="City" size="30"/><input onfocus="this.value=''" type="text" name="tostate" value="State" size="2"/><input onfocus="this.value=''" type="text" name="tozip" value="Zip" size="8"/>
+	<input onfocus="this.value=''" type="text" name="tocity" value="City" size="30"/>
+	<Select name="tostate"><option value="0" selected>State
+	    <option value="AK">AK</option>
+		<option value="AL">AL</option>
+		<option value="AR">AR</option>
+		<option value="AZ">AZ</option>
+		<option value="CA">CA</option>
+		<option value="CO">CO</option>
+		<option value="CT">CT</option>
+		<option value="DC">DC</option>
+		<option value="DE">DE</option>
+		<option value="FL">FL</option>
+		<option value="GA">GA</option>
+		<option value="HI">HI</option>
+		<option value="IA">IA</option>
+		<option value="ID">ID</option>
+		<option value="IL">IL</option>
+		<option value="IN">IN</option>
+		<option value="KS">KS</option>
+		<option value="KY">KY</option>
+		<option value="LA">LA</option>
+		<option value="MA">MA</option>
+		<option value="MD">MD</option>
+		<option value="ME">ME</option>
+		<option value="MI">MI</option>
+		<option value="MN">MN</option>
+		<option value="MO">MO</option>
+		<option value="MS">MS</option>
+		<option value="MT">MT</option>
+		<option value="NC">NC</option>
+		<option value="ND">ND</option>
+		<option value="NE">NE</option>
+		<option value="NH">NH</option>
+		<option value="NJ">NJ</option>
+		<option value="NM">NM</option>
+		<option value="NV">NV</option>
+		<option value="NY">NY</option>
+		<option value="OH">OH</option>
+		<option value="OK">OK</option>
+		<option value="OR">OR</option>
+		<option value="PA">PA</option>
+		<option value="RI">RI</option>
+		<option value="SC">SC</option>
+		<option value="SD">SD</option>
+		<option value="TN">TN</option>
+		<option value="TX">TX</option>
+		<option value="UT">UT</option>
+		<option value="VA">VA</option>
+		<option value="VT">VT</option>
+		<option value="WA">WA</option>
+		<option value="WI">WI</option>
+		<option value="WV">WV</option>
+		<option value="WY">WY</option>
+	</Select>
+	
+	<input onfocus="this.value=''" type="text" name="tozip" value="Zip" size="5"/>
 	<p>
+	<center>
+	<div id='myform_errorloc' class='error_strings'></div>
+	</center>
 	<b>Step 3</b> Click Send!
 	<p>
-	<input type="image" src="http://img.skitch.com/20100329-f2ru2425ph34w7tubis2rsnujm.png" alt="skitched-20100328-210007.png">
+	<input type="image" src="http://img.skitch.com/20100429-juynqayja1t9eh5wehsacsmfut.png" alt="skitched-20100328-210007.png">
 	</form>
+	
+	<script language="JavaScript" type="text/javascript">
+	 var frmvalidator  = new Validator("myform");
+	 frmvalidator.EnableOnPageErrorDisplaySingleBox();
+	 frmvalidator.EnableMsgsTogether();
+	 frmvalidator.EnableFocusOnError(false); 
+	
+
+	 frmvalidator.addValidation("content","req","Please enter your message");
+	 frmvalidator.addValidation("content","notcontent","Please enter your message");
+
+	 frmvalidator.addValidation("toaddress","req","Please enter your address");
+	 frmvalidator.addValidation("toaddress","notaddress","Please enter your address");
+
+	 frmvalidator.addValidation("tocity","req","Please enter your city");
+	 frmvalidator.addValidation("tocity","notcity","Please enter your city");
+
+	 frmvalidator.addValidation("tostate","dontselect=0","Please select your state");
+
+	 frmvalidator.addValidation("tozip","maxlen=5","Please enter your five digit zip code");
+	 frmvalidator.addValidation("tozip","req", "Please enter your zip code");
+	 frmvalidator.addValidation("tozip","notzip","Please enter your zip code");
+	
+	</script>
 	<font size=1>(Don't worry, we'll work out the details on the next page.)</font>
 	<p>
 	</div>

@@ -12,7 +12,6 @@ body {
 	width:90%;
 	min-height:200px;
 	padding-top:20px;
-	border: #B6BED0 40px solid;
 }
 
 #maincol
@@ -22,3 +21,5 @@ body {
 	width:60%;
 
 }
+
+.error_strings{ font-family:Verdana; font-size:10px; color:red;}
