@@ -12,6 +12,10 @@ class Greeting(db.Model):
     author = db.UserProperty()
     content = db.StringProperty(multiline=True)
     toaddress = db.StringProperty(multiline=True)
+    toaddress1 = db.StringProperty(multiline=True)
+    tocity = db.StringProperty(multiline=True)
+    tostate = db.StringProperty(multiline=True)
+    tozip = db.StringProperty(multiline=True)
     date = db.DateTimeProperty(auto_now_add=True)
 
 class MainPage(webapp.RequestHandler):
@@ -35,22 +39,34 @@ class MainPage(webapp.RequestHandler):
 	        path = os.path.join(os.path.dirname(__file__), 'index.html')
 	        self.response.out.write(template.render(path, template_values))
 
-class Guestbook(webapp.RequestHandler):
+class Confirm(webapp.RequestHandler):
     def post(self):
         greeting = Greeting()
-
-        if users.get_current_user():
-            greeting.author = users.get_current_user()
-
         greeting.content = self.request.get('content')
         greeting.toaddress = self.request.get('toaddress')
+        greeting.toaddress1 = self.request.get('toaddress1')
+        greeting.tocity = self.request.get('tocity')
+        greeting.tostate = self.request.get('tostate')
+        greeting.tozip = self.request.get('tozip')
+
         greeting.put()
-        self.redirect('/')
+
+        content_values = {
+            'greeting_content': greeting.content,
+            'greeting_toaddress': greeting.toaddress,
+            'greeting_toaddress1': greeting.toaddress1,
+            'greeting_tocity': greeting.tocity,
+            'greeting_tostate': greeting.tostate,
+            'greeting_tozip': greeting.tozip,
+        }
+
+        path = os.path.join(os.path.dirname(__file__), 'confirm.html')
+        self.response.out.write(template.render(path, content_values))
 
 
 application = webapp.WSGIApplication(
                                      [('/', MainPage),
-                                      ('/sign', Guestbook)],
+                                      ('/confirm', Confirm)],
                                      debug=True)
 
 def main():

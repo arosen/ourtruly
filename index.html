@@ -11,13 +11,15 @@
 	<b>Step 1</b>
 	Tell us what to write...
 	<p>
-	<form action="/sign" method="post">
-	<textarea name="content" rows="15" cols="45">Type your note...</textarea>
+	<form action="/confirm" method="post">
+	<textarea onfocus ="this.value=''" name="content" rows="15" cols="45">Type your note...</textarea>
 	<p>
 	<p>
 	<b>Step 2</b> Tell us who to send it to...
 	<p>
-	<textarea name="toaddress" rows="5" cols="45">Who should we send it to?</textarea>
+	<input onfocus="this.value=''" type="text" name="toaddress" value="Address" size="40"/><br>
+	<input onfocus="this.value=''" type="text" name="toaddress1" value="Address" size="40"/><br>
+	<input onfocus="this.value=''" type="text" name="tocity" value="City" size="30"/><input onfocus="this.value=''" type="text" name="tostate" value="State" size="2"/><input onfocus="this.value=''" type="text" name="tozip" value="Zip" size="8"/>
 	<p>
 	<b>Step 3</b> Click Send!
 	<p>
@@ -25,7 +27,6 @@
 	</form>
 	<font size=1>(Don't worry, we'll work out the details on the next page.)</font>
 	<p>
-	<a href="{{ url }}">{{ url_linktext }}</a>	
 	</div>
 
 </div>

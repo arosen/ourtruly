@@ -3,7 +3,39 @@
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
 </head>
   <body>
-Hey there
+
+<div id="container">
+	<h1>AnalogHAND [Logo]</h1>
+	
+	<div id="maincol">
+	<b>Here's a preview of your message:</b>
+	<p>
+	{{greeting_content}}
+	<p>
+	<p>
+	<b>We're going to send it to:</b>
+	<p>
+ 	{{greeting_toaddress}}<br>
+ 	{{greeting_toaddress1}}<br>
+ 	{{greeting_tocity}}, {{greeting_tostate}} {{greeting_tozip}}
+	<p>
+	Pay and Send!
+	<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/905873760171713" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
+	    <input name="item_name_1" type="hidden" value="Handwritten Note"/>
+	    <input name="item_description_1" type="hidden" value="One handwritten note"/>
+	    <input name="item_quantity_1" type="hidden" value="1"/>
+	    <input name="item_price_1" type="hidden" value="5.0"/>
+	    <input name="item_currency_1" type="hidden" value="USD"/>
+	    <input name="_charset_" type="hidden" value="utf-8"/>
+	    <input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=905873760171713&amp;w=117&amp;h=48&amp;style=white&amp;variant=text&amp;loc=en_US" type="image"/>
+	</form>
+	
+	<p>
+	<p>
+	</div>
+
+</div>
+
   </body>
 </html>
 
