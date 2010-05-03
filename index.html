@@ -4,11 +4,19 @@
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
 	<script language="JavaScript" src="/js/gen_validatorv31.js" type="text/javascript"></script>
 </head>
-  <body>
+<body>
+
+<div id="leftcontainer">
+Here is where we should put the other container that explains how the service works. Also, Jake is a CSS Ninja.
+<p>
+<img src='/images/howitworks.png' width=100%>
+</div>
 
 <div id="container">
+
 	<h1>AnalogHAND [Logo]</h1>
 	<hr>
+	
 	<div id="contentcol">
 	<b>Step 1</b>
 	Tell us what to write...<br>
@@ -81,18 +89,20 @@
 	
 	<input onblur="if(this.value == '') { this.value='Zip'}" onfocus="if (this.value == 'Zip') {this.value=''}" type="text" name="tozip" value="Zip" size="5"/>
 	<p>
-		
-		<div id="button">
-		<div id='myform_errorloc' class='error_strings'></div>
-		<b>Step 3</b> Hit the big red button!
-		<p>
-		<input type="image" src='/images/BigRed.png' width=300px>
-		</form>
-		<p>
-		<font size=1>(Don't worry, we'll work out the details on the next page.)</font>
-		</div>
+	</div>
 
+	<div id="button">
+		<div id='myform_errorloc' class='error_strings'></div>
+	<b>Step 3</b> Hit the big red button!
+	<p>
+	<input type="image" src='/images/BigRed.png' width=300px>
+	</form>
+	<p>
+	<font size=1>(Don't worry, we'll work out the details on the next page.)</font>
+	</div>
 	
+</div>
+
 	<script language="JavaScript" type="text/javascript">
 	 var frmvalidator  = new Validator("myform");
 	 frmvalidator.EnableOnPageErrorDisplaySingleBox();
@@ -123,9 +133,6 @@
 	 frmvalidator.addValidation("tozip","num","Please check your zip code");
 	
 	</script>
-
-
-</div>
 
   </body>
 </html>
