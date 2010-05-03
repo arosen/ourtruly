@@ -9,7 +9,7 @@ body {
 	margin:auto;
 	background-color: white;
 	width:70%;
-	margin-right:5%;
+	margin-right:3%;
 	min-height:200px;
 	padding-top:20px;
 	float:right;
@@ -99,4 +99,9 @@ body {
 }
 
 
-.error_strings{ font-family:Verdana; font-size:10px; color:red;}
+.error_strings
+{ 
+	font-family:Verdana; 
+	font-size:10px; 
+	color:red;
+}
