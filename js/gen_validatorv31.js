@@ -551,6 +551,16 @@ var ret = true;
      }//if 
 return ret;
 }
+function TestNotname(objValue,strError)
+{
+var ret = true;
+     if(objValue.value == "Name") 
+     { 
+     sfm_show_error_msg(strError,objValue); 
+     ret = false; 
+     }//if 
+return ret;
+}
 function TestNotaddress(objValue,strError)
 {
 var ret = true;
@@ -768,6 +778,11 @@ function validateInput(strValidateStr,objValue,strError)
         case "email": 
           { 
 			   ret = TestEmail(objValue,strError);
+               break; 
+          }
+		case "notname": 
+          { 
+			   ret = TestNotname(objValue,strError);
                break; 
           }
 		case "notaddress": 

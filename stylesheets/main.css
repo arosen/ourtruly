@@ -8,18 +8,83 @@ body {
 {
 	margin:auto;
 	background-color: white;
-	margin-top:20px;
-	width:90%;
+	width:75%;
 	min-height:200px;
 	padding-top:20px;
 }
 
-#maincol
+#contentcol
 {
 	margin:auto;
 	position:relative;
-	width:60%;
+	width:100%;
+	margin-top:20px;
+	margin-bottom:30px;
 
 }
+#addresscol
+{
+	margin:auto;
+	width:100%;
+
+}
+#button
+{
+	margin:auto;
+	position:relative;
+}
+
+#contentcase, #content
+{
+	width:400px;
+	height:200px;
+	position:relative;
+	margin:auto;
+	margin-bottom:30px;
+}
+#content
+{
+	border-color:black;
+	border-style:solid;
+	border-width:3px;
+	font-size:12;
+	text-align:left;
+	padding:10px;
+}
+
+#addresscase, #address
+{
+	width:50%;
+	float:left;
+	margin:auto;
+	margin-top:50px;
+}
+
+#address
+{
+	border-color:black;
+	border-style:solid;
+	border-width:3px;
+	font-size:12;
+	text-align:left;
+	padding:10px;
+	float:none;
+	margin:auto;
+
+}
+#returncase
+{
+	width:50%;
+	float:right;
+	margin-top:50px;
+}
+
+#checkout
+{
+	width:100%;
+	margin-top:240px;
+	float:none;
+}
+
 
 .error_strings{ font-family:Verdana; font-size:10px; color:red;}
