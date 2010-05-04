@@ -4,19 +4,23 @@ body {
 	text-align:center;
 	font-size:15;
 }
+
 #container
 {
 	margin:auto;
 	background-color: white;
 	width:70%;
 	margin-right:3%;
-	min-height:200px;
-	padding-top:20px;
 	float:right;
+}
+#footer
+{
+	font-size:11;
 }
 #leftcontainer
 {
 	margin:auto;
+	margin-left:1%;
 	background-color: white;
 	width:25%;
 	float:left;
