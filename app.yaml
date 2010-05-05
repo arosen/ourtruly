@@ -1,4 +1,4 @@
-application: analoghand
+application: ours-truly
 version: 1
 runtime: python
 api_version: 1
@@ -14,7 +14,7 @@ handlers:
 - url: /pages
   static_dir: pages
 - url: .*
-  script: analoghand.py
+  script: ours-truly.py
 
 
   
