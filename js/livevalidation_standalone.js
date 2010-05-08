@@ -627,8 +627,8 @@ var Validate = {
         var minimum = ((paramsObj.minimum) || (paramsObj.minimum == 0)) ? paramsObj.minimum : null;;
         var maximum = ((paramsObj.maximum) || (paramsObj.maximum == 0)) ? paramsObj.maximum : null;
     	var is = ((paramsObj.is) || (paramsObj.is == 0)) ? paramsObj.is : null;
-        var notANumberMessage = paramsObj.notANumberMessage || "Must be a number!";
-        var notAnIntegerMessage = paramsObj.notAnIntegerMessage || "Must be an integer!";
+        var notANumberMessage = paramsObj.notANumberMessage || "Invalid zip";
+        var notAnIntegerMessage = paramsObj.notAnIntegerMessage || "Invalid zip";
     	var wrongNumberMessage = paramsObj.wrongNumberMessage || "Must be " + is + "!";
     	var tooLowMessage = paramsObj.tooLowMessage || "Must not be less than " + minimum + "!";
     	var tooHighMessage = paramsObj.tooHighMessage || "Must not be more than " + maximum + "!";
@@ -693,7 +693,7 @@ var Validate = {
      */
     Email: function(value, paramsObj){
     	var paramsObj = paramsObj || {};
-    	var message = paramsObj.failureMessage || "Must be a valid email address!";
+    	var message = paramsObj.failureMessage || "Invalid entry";
     	Validate.Format(value, { failureMessage: message, pattern: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i } );
     	return true;
     },
@@ -723,7 +723,7 @@ var Validate = {
         var minimum = ((paramsObj.minimum) || (paramsObj.minimum == 0)) ? paramsObj.minimum : null;
     	var maximum = ((paramsObj.maximum) || (paramsObj.maximum == 0)) ? paramsObj.maximum : null;
     	var is = ((paramsObj.is) || (paramsObj.is == 0)) ? paramsObj.is : null;
-        var wrongLengthMessage = paramsObj.wrongLengthMessage || "Must be " + is + " characters long!";
+        var wrongLengthMessage = paramsObj.wrongLengthMessage || "Invalid entry";
     	var tooShortMessage = paramsObj.tooShortMessage || "Must not be less than " + minimum + " characters long!";
     	var tooLongMessage = paramsObj.tooLongMessage || "Must not be more than " + maximum + " characters long!";
     	switch(true){

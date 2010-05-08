@@ -7,11 +7,7 @@
 <body>
 
 <div id="leftcontainer">
-Here is where we should put the other container that explains how the service works. I'm thinking this might go on both pages, walking the user through the process. 
-Also, Jake is a CSS Ninja.
-<p>
-<img src='/images/Howitworks.png' width=100% alt="How it works">
-<p>
+<img src='/images/howitworks4.png' width=120% alt="How it works">
 <div id='myform_errorloc' class='error_strings'></div>
 
 </div>
@@ -21,19 +17,18 @@ Also, Jake is a CSS Ninja.
 <div id="container">
 <div id="shadowbox">
 	<div id="contentcol">
-	<b>Step 1</b>
+	<b><font color="#FFBE73">Step 1</b></font>
 	Tell us what to write...<br>
 	<font size=1>Type < p > for a new paragraph</font>
 	<p>
 	<form action="/confirm" name="myform" method="post">
-	
-	<textarea onblur="if(this.value == '') { this.value='Type your note...'}" onfocus="if (this.value == 'Type your note...') {this.value=''}" name="content" rows="12" cols="45" id="content">Type your note...</textarea>
+	<textarea onblur="if(this.value == '') { this.value='Type your note...'}" onfocus="if (this.value == 'Type your note...') {this.value=''}" name="content" rows="12" cols="40" id="content">Type your note...</textarea>
 	</div>
 
 	<div id="addresscol">
-	<b>Step 2</b> Tell us who to send it to...
+	<b><font color="#FFBE73">Step 2</b></font> Tell us who to send it to...
 	<p>    
-	<input id="toname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="toname" value="Name" size="40"/><br>
+	<input id="toname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="toname" value="Name" size="45"/><br>
 	
 	<script type="text/javascript"> 
     var toname = new LiveValidation('toname', {onlyOnSubmit: true });
@@ -41,17 +36,15 @@ Also, Jake is a CSS Ninja.
         toname.add(Validate.Presence);
 	</script>
 	
-	<input id="toaddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="toaddress" value="Address" size="40"/><br>
+	<input id="toaddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="toaddress" value="Address" size="45"/><br>
 
 	<script type="text/javascript"> 
     var toaddress = new LiveValidation('toaddress', {onlyOnSubmit: true });
 		toaddress.add(Validate.Exclusion, {within: ['Address']})
         toaddress.add(Validate.Presence);
 	</script>
-
-	<input onblur="if(this.value == '') { this.value='Address (Optional)'}" onfocus="if (this.value == 'Address (Optional)') {this.value=''}" type="text" name="toaddress1" value="Address (Optional)" size="40"/><br>
 	
-	<input id="tocity" onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="tocity" value="City" size="30"/>
+	<input id="tocity" onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="tocity" value="City" size="22"/>
 	<Select name="tostate"><option value="0" selected>State
 	    <option value="AK">AK</option>
 		<option value="AL">AL</option>
@@ -116,9 +109,9 @@ Also, Jake is a CSS Ninja.
 
 	<p>
 	</div>
-	<b>Step 3</b> Enter <b>your</b> email address:
+	<b><font color="#FFBE73">Step 3</font></b> Enter <b>your</b> email address:
 	<p>
-	<input id="useremail" onblur="if(this.value == '') { this.value='Your Email'}" onfocus="if (this.value == 'Your Email') {this.value=''}" type="text" name="useremail" value="Your Email" size="40"/><br>
+	<input id="useremail" onblur="if(this.value == '') { this.value='Your Email'}" onfocus="if (this.value == 'Your Email') {this.value=''}" type="text" name="useremail" value="Your Email" size="45"/><br>
 
 	<script type="text/javascript"> 
     var useremail = new LiveValidation('useremail', { validMessage: "Thanks!", wait: 500, onlyOnSubmit: true });
@@ -128,12 +121,10 @@ Also, Jake is a CSS Ninja.
 	</script>
 
 	<p>
-	<b>Step 4</b> Hit the big red button!
-	<p>
 	<input type="image" src='/images/BigRed.png' width=300px>
 	</form>
 	<p>
-	<font size=1>(Don't worry, we'll work out the details on the next page.)</font>
+	<font size=2>(Don't worry, we'll work out the details on the next page)</font>
 </div>
 
 	<div id="footer">

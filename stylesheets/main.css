@@ -1,31 +1,37 @@
 html,
 body {
-	font-family: Verdana, Helvetica, sans-serif;
+	font-family: Helvetica, sans-serif;
 	text-align:center;
 	font-size:15;
+	background:#F0F0F0;
 }
 
 #leftcontainer
 {
-	margin:auto;
 	margin-left:1%;
-	background-color: white;
-	width:25%;
+	margin-top:10px;
+	background-color:#F0F0F0;
+	width:30%;
 	float:left;
 	min-height:200px;
 	padding-top:20px;
 }
-input, textarea, select
+input, textarea
 {
-	font-size:11pt;
+	font-size:10pt;
+}
+select
+{
+	font-size:20pt;
 }
 #container
 {
 	margin:auto;
-	background-color: white;
-	width:70%;
+	background-color: #F0F0F0;
+	width:64%;
 	margin-right:3%;
 	float:right;
+	font-size:20;
 }
 #shadowbox
 {
@@ -35,8 +41,10 @@ input, textarea, select
 	width:80%;
 	margin-left:10%;
 	margin-right:10%;
-	margin-bottom:20px;
+	margin-bottom:10px;
 	float:right;
+	background-color:#3CA0D1;
+	color:white;
 }
 #contentcol
 {
@@ -44,7 +52,7 @@ input, textarea, select
 	position:relative;
 	width:100%;
 	margin-top:20px;
-	margin-bottom:30px;
+	margin-bottom:20px;
 	float:none;
 
 }
@@ -62,72 +70,76 @@ input, textarea, select
 	color:red;
 }
 .LV_validation_message{
-    color:#900000;
+    color:white;
     margin:auto;
 	position:absolute;
-	width:200px;
 	font-size:10pt;
-	margin-left:10px;
+	margin-left:5px;
 	text-align:left;
-
 }
 
 #footer
 {
 	font-size:11;
-	margin-bottom:10px;
 }
 
 /**Confirm**/
-#previewcase, #preview
+#confirmbox
 {
-	width:400px;
-	height:200px;
-	position:relative;
-	margin:auto;
-	margin-bottom:30px;
+
+	width:63%;
+	margin-bottom:10px;
+	float:right;
+	background-color:#F0F0F0;
+	color:black;
+	margin-right:3%;
+	
 }
 #preview
 {
-	border-color:black;
-	border-style:solid;
-	border-width:3px;
-	font-size:12;
+	color:white;
+	margin:auto;
+	margin-top:10px;;
+	width:60%;
+	min-height:100px;
+	background-color:#3CA0D1;
+	font-size:13;
 	text-align:left;
 	padding:10px;
-}
-
-#addresscase, #address
-{
-	width:50%;
-	float:left;
-	margin:auto;
-	margin-top:50px;
+	-moz-box-shadow: 3px 3px 4px 1px #686868;
+	-webkit-box-shadow: 3px 3px 4px 1px #686868;
+	box-shadow: 3px 3px 4px 1px #686868;
 }
 
 #address
 {
-	border-color:black;
-	border-style:solid;
-	border-width:3px;
-	font-size:12;
+	color:white;
+	width:30%;
+	margin:auto;
+	font-size:13;
 	text-align:left;
 	padding:10px;
-	float:none;
 	margin:auto;
+	-moz-box-shadow: 3px 3px 4px 1px #686868;
+	-webkit-box-shadow: 3px 3px 4px 1px #686868;
+	box-shadow: 3px 3px 4px 1px #686868;
+	background-color:#3CA0D1;
 
 }
 #returncase
 {
-	width:50%;
-	float:right;
-	margin-top:50px;
+	width:60%;
+	margin:auto;
+	padding:10px;
+	-moz-box-shadow: 3px 3px 4px 1px #686868;
+	-webkit-box-shadow: 3px 3px 4px 1px #686868;
+	box-shadow: 3px 3px 4px 1px #686868;
+	background-color:#3CA0D1;
 }
 
 #checkout
 {
 	width:100%;
-	margin-top:240px;
 	float:none;
 }
 

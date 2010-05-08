@@ -2,47 +2,52 @@
 <title>OursTruly</title>
 <head>
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+	<script language="JavaScript" src="/js/livevalidation_standalone.js" type="text/javascript"></script>
 </head>
-  <body>
+<body>
+
 <div id="leftcontainer">
-You're almost there!
-<p>
-<img src='/images/Howitworks.png' width=100% alt="How it works">
+<img src='/images/howitworks4.png' width=120% alt="How it works">
+<div id='myform_errorloc' class='error_strings'></div>
 </div>
-<div id="container">
-	<h1>OursTruly [Logo]</h1>
-	<hr>
-	
-	<div id="previewcase">
-	<b>Here's a preview of your message: <a href="/">(Start Over)</a></b>
+<h1>OursTruly [Logo]</h1>	
+	<div id="confirmbox">
 	<p>
-	<div id="preview">
-	{{greeting_content}}
-	</div>
-	</div>
-	
+	<b>We're going to send a handwritten note to:</b>
 	<p>
+		<div id="address">
+		{{greeting_toname}}<br>
+	 	{{greeting_toaddress}}<br>
+	 	{{greeting_tocity}}, {{greeting_tostate}} {{greeting_tozip}}
+		</div>
 	<p>
-	
-	<div id="addresscase">
-	<b>We're going to send it to:</b>
+	<b>...with the following message:</b>
+		<div id="preview">
+		{{greeting_content}}
+		</div>
+	<p>	
 	<p>
-	<div id="address">
-	{{greeting_toname}}<br>
- 	{{greeting_toaddress}}<br>
- 	{{greeting_toaddress1}}<br>
- 	{{greeting_tocity}}, {{greeting_tostate}} {{greeting_tozip}}
-	</div>
-	
-	</div>
-	
+	<b>Last step</b>: Please enter your return address <br><font size="2">(so that we can write it on the envelope)</font>
 	<div id="returncase">
-	<b>Enter your return address... (optional)</b>
 	<p>
-	<input onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="frname" value="Name" size="40"/><br>
-	<input onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="fraddress" value="Address" size="40"/><br>
-	<input onblur="if(this.value == '') { this.value='Address (Optional)'}" onfocus="if (this.value == 'Address (Optional)') {this.value=''}" type="text" name="fraddress1" value="Address (Optional)" size="40"/><br>
-	<input onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="frcity" value="City" size="30"/>
+	<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/507930858403206" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
+	<input id="frname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="frname" value="Name" size="35"/><br>
+
+	<script type="text/javascript"> 
+    var frname = new LiveValidation('frname', {onlyOnSubmit: true });
+		frname.add(Validate.Exclusion, {within: ['Name']})
+        frname.add(Validate.Presence);
+	</script>
+
+	<input id="fraddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="fraddress" value="Address" size="35"/><br>
+
+	<script type="text/javascript"> 
+    var fraddress = new LiveValidation('fraddress', {onlyOnSubmit: true });
+		fraddress.add(Validate.Exclusion, {within: ['Address']})
+        fraddress.add(Validate.Presence);
+	</script>
+
+	<input onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="frcity" value="City" size="13"/>
 	<Select name="frstate"><option value="0" selected>State
 	    <option value="AK">AK</option>
 		<option value="AL">AL</option>
@@ -97,14 +102,18 @@ You're almost there!
 		<option value="WY">WY</option>
 	</Select>
 
-	<input onblur="if(this.value == '') { this.value='Zip'}" onfocus="if (this.value == 'Zip') {this.value=''}" type="text" name="frzip" value="Zip" size="5"/>
+	<input id="frzip" onblur="if(this.value == '') { this.value='Zip'}" onfocus="if (this.value == 'Zip') {this.value=''}" type="text" name="frzip" value="Zip" size="5"/>
+	<script type="text/javascript"> 
+    var frzip = new LiveValidation('frzip', {onlyOnSubmit: true });
+		frzip.add(Validate.Exclusion, {within: ['Zip']})
+		frzip.add(Validate.Numericality, {onlyInteger:true})
+        frzip.add(Validate.Length, { is: 5 } );
+		frzip.add(Validate.Presence);
+	</script>
 	<p>
 	</div>
 	<p>
 	<div id="checkout">
-	<b>Hit the big blue button to complete your order!</b>
-	<p>
-	<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/507930858403206" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
 	    <input name="item_name_1" type="hidden" value="OursTruly Handwritten Note"/>
 	    <input name="item_description_1" type="hidden" value=""/>
 	    <input name="item_quantity_1" type="hidden" value="1"/>
@@ -114,7 +123,11 @@ You're almost there!
 	    <input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=507930858403206&amp;w=117&amp;h=48&amp;style=white&amp;variant=text&amp;loc=en_US" type="image"/>
 	</form>
 	</div>
-	
+	<p>
+	<div id="footer">
+	<a href="/pages/howitworks.html">How It Works</a> <a href="/pages/about.html">OurStory</a> <a href="mailto:info@ourstruly.com">Contact Us</a> <a href="/pages/terms.html">Terms of Service</a>
+	</div>
+	</div>
 	<p>
 	<p>
 	<!-- Google Code for Confirm Conversion Page -->
