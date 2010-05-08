@@ -8,7 +8,6 @@
 
 <div id="leftcontainer">
 <img src='/images/howitworks4.png' width=120% alt="How it works">
-<div id='myform_errorloc' class='error_strings'></div>
 </div>
 <h1>OursTruly [Logo]</h1>	
 	<div id="confirmbox">
@@ -114,15 +113,17 @@
 	</div>
 	<p>
 	<div id="checkout">
-	    <input name="item_name_1" type="hidden" value="OursTruly Handwritten Note"/>
+	<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/507930858403206" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
+	    <input name="item_name_1" type="hidden" value="Handwritten Note"/>
 	    <input name="item_description_1" type="hidden" value=""/>
 	    <input name="item_quantity_1" type="hidden" value="1"/>
-	    <input name="item_price_1" type="hidden" value="4.0"/>
+	    <input name="item_price_1" type="hidden" value="3.99"/>
 	    <input name="item_currency_1" type="hidden" value="USD"/>
 	    <input name="_charset_" type="hidden" value="utf-8"/>
-	    <input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=507930858403206&amp;w=117&amp;h=48&amp;style=white&amp;variant=text&amp;loc=en_US" type="image"/>
+	    <input alt="" src="http://sandbox.google.com/checkout/buttons/checkout.gif?merchant_id=507930858403206&amp;w=180&amp;h=46&amp;style=trans&amp;variant=text&amp;loc=en_US" height="46" width="180" type="image"/>
 	</form>
 	</div>
+	
 	<p>
 	<div id="footer">
 	<a href="/pages/howitworks.html">How It Works</a> <a href="/pages/about.html">OurStory</a> <a href="mailto:info@ourstruly.com">Contact Us</a> <a href="/pages/terms.html">Terms of Service</a>
@@ -130,6 +131,9 @@
 	</div>
 	<p>
 	<p>
+	
+	
+	
 	<!-- Google Code for Confirm Conversion Page -->
 	<script type="text/javascript">
 	<!--
@@ -159,8 +163,6 @@ try {
 var pageTracker = _gat._getTracker("UA-16224375-1");
 pageTracker._trackPageview();
 } catch(err) {}</script>
-
-
-  </body>
+</body>
 </html>
 

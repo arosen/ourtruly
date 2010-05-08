@@ -35,9 +35,7 @@ select
 }
 #shadowbox
 {
-	-moz-box-shadow: 3px 3px 4px 1px #686868;
-	-webkit-box-shadow: 3px 3px 4px 1px #686868;
-	box-shadow: 3px 3px 4px 1px #686868;
+
 	width:80%;
 	margin-left:10%;
 	margin-right:10%;
@@ -63,12 +61,6 @@ select
 	float:none;
 }
 
-.error_strings
-{ 
-	font-family:Verdana; 
-	font-size:12pt; 
-	color:red;
-}
 .LV_validation_message{
     color:white;
     margin:auto;
@@ -81,6 +73,7 @@ select
 #footer
 {
 	font-size:11;
+	margin-bottom:10px;
 }
 
 /**Confirm**/
@@ -140,7 +133,6 @@ select
 #checkout
 {
 	width:100%;
-	float:none;
 }
 
 
@@ -172,9 +164,18 @@ select
 /**How it Works**/
 #howcontainer
 {
-	margin-left:10%;
-	margin-right:10%;
-	margin-top:5%;
+	text-align:left;
+	margin:auto;
+	width:48%;
+	margin-top:1%;
+	margin-right:8%;
+	margin-left:8%;
+	margin-bottom:10px;
+	float:right;
+	font-size:19;
+	background-color:#3CA0D1;
+	padding:20px;
+	color:white;
 }
 
 /**Terms**/
