@@ -10,6 +10,7 @@ from google.appengine.ext import db
 
 class Greeting(db.Model):
     author = db.UserProperty()
+    useremail = db.StringProperty(multiline=True)
     content = db.TextProperty()
     toname = db.StringProperty(multiline=True)
     toaddress = db.StringProperty(multiline=True)

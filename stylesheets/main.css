@@ -5,39 +5,6 @@ body {
 	font-size:15;
 }
 
-#container
-{
-	margin:auto;
-	background-color: white;
-	width:70%;
-	margin-right:3%;
-	float:right;
-}
-#termsleft
-{
-	text-align:left;
-	font-size:10;
-	width:50%;
-	float:left;
-}
-#termsright
-{
-	text-align:center;
-	font-size:80;
-	width:50%;	
-	float:right;
-}
-#termscontainer
-{
-	width:70%;
-	margin:auto;
-	margin-top:5%;
-}
-#footer
-{
-	font-size:11;
-	margin-bottom:10px;
-}
 #leftcontainer
 {
 	margin:auto;
@@ -48,7 +15,29 @@ body {
 	min-height:200px;
 	padding-top:20px;
 }
-
+input, textarea, select
+{
+	font-size:11pt;
+}
+#container
+{
+	margin:auto;
+	background-color: white;
+	width:70%;
+	margin-right:3%;
+	float:right;
+}
+#shadowbox
+{
+	-moz-box-shadow: 3px 3px 4px 1px #686868;
+	-webkit-box-shadow: 3px 3px 4px 1px #686868;
+	box-shadow: 3px 3px 4px 1px #686868;
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+	margin-bottom:20px;
+	float:right;
+}
 #contentcol
 {
 	margin:auto;
@@ -65,13 +54,32 @@ body {
 	width:100%;
 	float:none;
 }
-#button
-{
-	margin:auto;
-	position:relative;
+
+.error_strings
+{ 
+	font-family:Verdana; 
+	font-size:12pt; 
+	color:red;
+}
+.LV_validation_message{
+    color:#900000;
+    margin:auto;
+	position:absolute;
+	width:200px;
+	font-size:10pt;
+	margin-left:10px;
+	text-align:left;
+
 }
 
-#contentcase, #content
+#footer
+{
+	font-size:11;
+	margin-bottom:10px;
+}
+
+/**Confirm**/
+#previewcase, #preview
 {
 	width:400px;
 	height:200px;
@@ -79,7 +87,7 @@ body {
 	margin:auto;
 	margin-bottom:30px;
 }
-#content
+#preview
 {
 	border-color:black;
 	border-style:solid;
@@ -124,13 +132,8 @@ body {
 }
 
 
-.error_strings
-{ 
-	font-family:Verdana; 
-	font-size:10px; 
-	color:red;
-}
 
+/**OurStory**/
 #aboutcontainer
 {
 	margin:10%;
@@ -154,9 +157,32 @@ body {
 	width:25%;
 	float:left;
 }
+/**How it Works**/
 #howcontainer
 {
 	margin-left:10%;
 	margin-right:10%;
+	margin-top:5%;
+}
+
+/**Terms**/
+#termsleft
+{
+	text-align:left;
+	font-size:10;
+	width:50%;
+	float:left;
+}
+#termsright
+{
+	text-align:center;
+	font-size:80;
+	width:50%;	
+	float:right;
+}
+#termscontainer
+{
+	width:70%;
+	margin:auto;
 	margin-top:5%;
 }
