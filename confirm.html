@@ -7,7 +7,9 @@
 <body>
 
 <div id="leftcontainer">
-<img src='/images/howitworks4.png' width=120% alt="How it works">
+<a href="/">
+<img src='/images/howitworks4.png' height=530px alt="How it works">
+</a>
 </div>
 <h1>OursTruly [Logo]</h1>	
 	<div id="confirmbox">
@@ -30,7 +32,7 @@
 	<div id="returncase">
 	<p>
 	<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/507930858403206" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
-	<input id="frname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="frname" value="Name" size="35"/><br>
+	<input id="frname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="frname" value="Name" size="45"/><br>
 
 	<script type="text/javascript"> 
     var frname = new LiveValidation('frname', {onlyOnSubmit: true });
@@ -38,7 +40,7 @@
         frname.add(Validate.Presence);
 	</script>
 
-	<input id="fraddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="fraddress" value="Address" size="35"/><br>
+	<input id="fraddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="fraddress" value="Address" size="45"/><br>
 
 	<script type="text/javascript"> 
     var fraddress = new LiveValidation('fraddress', {onlyOnSubmit: true });
@@ -46,7 +48,7 @@
         fraddress.add(Validate.Presence);
 	</script>
 
-	<input onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="frcity" value="City" size="13"/>
+	<input onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="frcity" value="City" size="25"/>
 	<Select name="frstate"><option value="0" selected>State
 	    <option value="AK">AK</option>
 		<option value="AL">AL</option>

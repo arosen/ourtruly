@@ -1,68 +1,61 @@
-html,
 body {
 	font-family: Helvetica, sans-serif;
 	text-align:center;
 	font-size:15;
 	background:#F0F0F0;
+	color:white;
+}
+a img 
+{
+	border: none; 
 }
 
 #leftcontainer
 {
-	margin-left:1%;
 	margin-top:10px;
 	background-color:#F0F0F0;
-	width:30%;
+	width:32%;
 	float:left;
 	min-height:200px;
 	padding-top:20px;
+	text-align:center;
 }
-input, textarea
+input, textarea, select
 {
 	font-size:10pt;
+	font-family: Helvetica, sans-serif;
+	
 }
-select
-{
-	font-size:20pt;
-}
-#container
+
+#container, #howcontainer
 {
 	margin:auto;
 	background-color: #F0F0F0;
-	width:64%;
+	width:63%;
 	margin-right:3%;
 	float:right;
 	font-size:20;
 }
-#shadowbox
+#shadowbox, #howbox
 {
 
-	width:80%;
+	width:85%;
 	margin-left:10%;
 	margin-right:10%;
 	margin-bottom:10px;
 	float:right;
 	background-color:#3CA0D1;
-	color:white;
+	
 }
 #contentcol
 {
-	margin:auto;
-	position:relative;
-	width:100%;
 	margin-top:20px;
 	margin-bottom:20px;
-	float:none;
+}
 
-}
-#addresscol
-{
-	margin:auto;
-	width:100%;
-	float:none;
-}
 
 .LV_validation_message{
-    color:white;
+    
     margin:auto;
 	position:absolute;
 	font-size:10pt;
@@ -90,7 +83,7 @@ select
 }
 #preview
 {
-	color:white;
+	
 	margin:auto;
 	margin-top:10px;;
 	width:60%;
@@ -106,7 +99,7 @@ select
 
 #address
 {
-	color:white;
+	
 	width:30%;
 	margin:auto;
 	font-size:13;
@@ -141,41 +134,59 @@ select
 #aboutcontainer
 {
 	margin:10%;
-	margin-top:5%;
+	margin-top:2%;
 }
 #abouttext
 {
-	width:50%;
+	width:40%;
+	height:400px;
 	float:left;
 	text-align:left;
 	font-size:13;
+	
+	padding-left:5%;
+	padding-right:5%;
+	padding-top:20px;
+	padding-bottom:2%;
+	background-color:#3CA0D1;
+	margin-bottom:10px;
 }
 #aboutjake
 {
 	width:25%;
 	float:left;
-
+	background-color:#3CA0D1;
+	padding-top:20px;
+	height:400px;
+	padding-bottom:2%;
+	margin-bottom:10px;
+	
 }
 #aboutalex
 {
+	
 	width:25%;
 	float:left;
+	background-color:#3CA0D1;
+	height:400px;
+	padding-top:20px;
+	padding-bottom:2%;
+	margin-bottom:10px;
 }
 /**How it Works**/
 #howcontainer
 {
+	width:60%;
+}
+
+#howbox
+{
+	font-size:13;
 	text-align:left;
-	margin:auto;
-	width:48%;
-	margin-top:1%;
-	margin-right:8%;
-	margin-left:8%;
-	margin-bottom:10px;
-	float:right;
-	font-size:19;
-	background-color:#3CA0D1;
-	padding:20px;
-	color:white;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:10px;
+
 }
 
 /**Terms**/
@@ -185,6 +196,7 @@ select
 	font-size:10;
 	width:50%;
 	float:left;
+	color:black;
 }
 #termsright
 {
@@ -192,6 +204,7 @@ select
 	font-size:80;
 	width:50%;	
 	float:right;
+	color:black;
 }
 #termscontainer
 {
