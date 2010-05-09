@@ -30,9 +30,10 @@
 </a>
 </div>
 
-
-
-<h1>OursTruly [Logo]</h1>
+<div id="logo">
+<a href="/"><img src='/images/logo.png' height=100px alt="OursTruly"></a>
+</div>
+<p>
 
 <div id="container">
 <div id="shadowbox">
@@ -47,15 +48,14 @@
 
 	<b><font color="#FFBE73">Step 2</b></font> Tell us who to send it to...
 	<p>    
-	<input id="toname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="toname" value="Name" size="45"/><br>
+	<input id="toname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="toname" value="Name" size="46" STYLE="margin-bottom:2px"/><br>
 	
 	<script type="text/javascript"> 
     var toname = new LiveValidation('toname', {onlyOnSubmit: true });
 		toname.add(Validate.Exclusion, {within: ['Name']})
         toname.add(Validate.Presence);
 	</script>
-	
-	<input id="toaddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="toaddress" value="Address" size="45"/><br>
+	<input id="toaddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="toaddress" value="Address" size="46" STYLE="margin-bottom:2px"/><br>
 
 	<script type="text/javascript"> 
     var toaddress = new LiveValidation('toaddress', {onlyOnSubmit: true });
@@ -63,7 +63,7 @@
         toaddress.add(Validate.Presence);
 	</script>
 	
-	<input id="tocity" onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="tocity" value="City" size="25"/>
+	<input id="tocity" onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="tocity" value="City" size="26"/>
 	<Select name="tostate"><option value="0" selected>State
 	    <option value="AK">AK</option>
 		<option value="AL">AL</option>

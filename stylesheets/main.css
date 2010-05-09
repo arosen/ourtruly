@@ -10,6 +10,10 @@ a img
 	border: none; 
 }
 
+#logo
+{
+	margin-left:33%;
+}
 #leftcontainer
 {
 	margin-top:10px;
@@ -137,7 +141,6 @@ input, textarea, select
 	float:left;
 	text-align:left;
 	font-size:13;
-	
 	padding-left:5%;
 	padding-right:5%;
 	padding-top:20px;
@@ -205,5 +208,5 @@ input, textarea, select
 {
 	width:70%;
 	margin:auto;
-	margin-top:5%;
+	margin-top:1%;
 }

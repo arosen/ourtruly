@@ -27,11 +27,16 @@
 <img src='/images/howitworks4.png' height=530px alt="How it works">
 </a>
 </div>
-<h1>OursTruly [Logo]</h1>	
-	<div id="confirmcontainer">
+
+<div id="logo">
+<a href="/"><img src='/images/logo.png' height=100px alt="OursTruly"></a>
+</div>
+<p>	
+
+<div id="confirmcontainer">
 	<div id="confirmbox">
 	<p>
-	<b>We're going to send a handwritten note to:</b>
+	<b>We're going to send a <font color="#FFBE73">handwritten note</font> to:</b>
 	<p>
 		<div id="address">
 		{{greeting_toname}}<br>
@@ -39,15 +44,16 @@
 	 	{{greeting_tocity}}, {{greeting_tostate}} {{greeting_tozip}}
 		</div>
 	<p>
-	<b>...with the following message:</b>
+	<b>...with the following <font color="#FFBE73">message:</font></b>
 		<div id="preview">
 		{{greeting_content}}
 		</div>
 	<p>	
-	<b>Last step</b>: Please enter your return address <br><font size="2">(so that we can write it on the envelope)</font>
+	<b><font color="#FFBE73">Last step</font></b>: Please enter your return address <br><font size="2">(so that we can write it on the envelope)</font>
 	<div id="returncase">
 	<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/507930858403206" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top" >
-	<input id="frname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="frname" value="Name" size="45"/><br>
+
+	<input id="frname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="frname" value="Name" size="45" STYLE="margin-bottom:2px"/><br>
 
 	<script type="text/javascript"> 
     var frname = new LiveValidation('frname', {onlyOnSubmit: true });
@@ -55,7 +61,7 @@
         frname.add(Validate.Presence);
 	</script>
 
-	<input id="fraddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="fraddress" value="Address" size="45"/><br>
+	<input id="fraddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="fraddress" value="Address" size="45" STYLE="margin-bottom:2px"/><br>
 
 	<script type="text/javascript"> 
     var fraddress = new LiveValidation('fraddress', {onlyOnSubmit: true });
