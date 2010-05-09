@@ -27,7 +27,7 @@ input, textarea, select
 	
 }
 
-#container, #howcontainer
+#container, #howcontainer, #confirmcontainer
 {
 	margin:auto;
 	background-color: #F0F0F0;
@@ -35,7 +35,7 @@ input, textarea, select
 	float:right;
 	font-size:20;
 }
-#shadowbox, #howbox
+#shadowbox, #howbox, #confirmbox
 {
 
 	width:85%;
@@ -76,12 +76,6 @@ input, textarea, select
 #confirmbox
 {
 
-	width:63%;
-	margin-bottom:10px;
-	float:right;
-	background-color:#F0F0F0;
-	color:black;
-	margin-right:3%;
 	
 }
 #preview
@@ -91,7 +85,8 @@ input, textarea, select
 	margin-top:10px;;
 	width:60%;
 	min-height:100px;
-	background-color:#3CA0D1;
+	background-color:white;
+	color:black;
 	font-size:13;
 	text-align:left;
 	padding:10px;
@@ -99,27 +94,32 @@ input, textarea, select
 
 #address
 {
-	
+	background-color:white;
+	color:black;
 	width:30%;
 	margin:auto;
 	font-size:13;
 	text-align:left;
 	padding:10px;
 	margin:auto;
-	background-color:#3CA0D1;
+	background-color:white;
 
 }
 #returncase
 {
 	width:60%;
 	margin:auto;
-	padding:10px;
 	background-color:#3CA0D1;
 }
 
 #checkout
 {
-	width:100%;
+	width:30%;
+	margin:auto;
+	background-color:white;
+	padding:10px;
+	margin-bottom:10px;
+	border: solid blue;
 }
 
 
