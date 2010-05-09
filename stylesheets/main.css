@@ -110,7 +110,7 @@ input, textarea, select
 }
 #returncase
 {
-	width:60%;
+	width:100%;
 	margin:auto;
 	background-color:#3CA0D1;
 }
@@ -122,7 +122,7 @@ input, textarea, select
 	background-color:white;
 	padding:10px;
 	margin-bottom:10px;
-	border: solid blue;
+	border: solid #FFBE73;
 }
 
 
