@@ -52,19 +52,19 @@
 	<font size=1>Type < p > for a new paragraph</font>
 	<p>
 	<form action="/confirm" name="myform" method="post">	
-	<textarea onblur="if(this.value == '') { this.value='Type your note...'}" onfocus="if (this.value == 'Type your note...') {this.value=''}" name="content" rows="9" cols="44" id="content" onkeyup="textLimit(this, 1000);">Type your note...</textarea>
+	<textarea onblur="if(this.value == '') { this.value='Type your note...'}" onfocus="if (this.value == 'Type your note...') {this.value=''}" name="content" rows="9" cols="40" id="content" onkeyup="textLimit(this, 1000);">Type your note...</textarea>
 	</div>
 
 	<b><font color="#FFBE73">Step 2</b></font> Tell us who to send it to...
 	<p>    
-	<input id="toname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="toname" value="Name" size="46" STYLE="margin-bottom:2px"/><br>
+	<input id="toname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="toname" value="Name" size="42" STYLE="margin-bottom:2px"/><br>
 	
 	<script type="text/javascript"> 
     var toname = new LiveValidation('toname', {onlyOnSubmit: true });
 		toname.add(Validate.Exclusion, {within: ['Name']})
         toname.add(Validate.Presence);
 	</script>
-	<input id="toaddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="toaddress" value="Address" size="46" STYLE="margin-bottom:2px"/><br>
+	<input id="toaddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="toaddress" value="Address" size="42" STYLE="margin-bottom:2px"/><br>
 
 	<script type="text/javascript"> 
     var toaddress = new LiveValidation('toaddress', {onlyOnSubmit: true });
@@ -72,7 +72,7 @@
         toaddress.add(Validate.Presence);
 	</script>
 	
-	<input id="tocity" onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="tocity" value="City" size="26"/>
+	<input id="tocity" onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="tocity" value="City" size="22"/>
 	<Select name="tostate"><option value="0" selected>State
 	    <option value="AK">AK</option>
 		<option value="AL">AL</option>
@@ -136,17 +136,6 @@
 	</script>
 
 	<p>
-	<b><font color="#FFBE73">Step 3</font></b> Enter <b>your</b> email address:
-	<p>
-	<input id="useremail" onblur="if(this.value == '') { this.value='Your Email'}" onfocus="if (this.value == 'Your Email') {this.value=''}" type="text" name="useremail" value="Your Email" size="45"/><br>
-
-	<script type="text/javascript"> 
-    var useremail = new LiveValidation('useremail', { validMessage: "Thanks!", wait: 500, onlyOnSubmit: true });
-		useremail.add(Validate.Exclusion, {within: ['Your Email']})
-		useremail.add(Validate.Presence );
-        useremail.add(Validate.Email);
-	</script>
-
 	<p>
 	<input type="image" src='/images/BigRed.png' width=300px>
 	</form>
@@ -155,7 +144,7 @@
 </div>
 
 	<div id="indexfooter">
-	<a href="/">Home</a> <a href="/pages/howitworks.html">How It Works</a> <a href="/pages/about.html">OurStory</a> <a href="/pages/contactus.html">Contact Us</a> <a href="/pages/terms.html">Terms of Service</a>
+	<a href="/">Home</a>&nbsp;&nbsp;&nbsp;<a href="/pages/howitworks.html">How It Works</a>&nbsp;&nbsp;&nbsp;<a href="/pages/contactus.html">Businesses</a>&nbsp;&nbsp;&nbsp;<a href="/pages/about.html">OurStory</a>&nbsp;&nbsp;&nbsp;<a href="/pages/contactus.html">Contact Us</a>&nbsp;&nbsp;&nbsp;<a href="/pages/terms.html">Terms of Service</a>
 	</div>
 
 </div>

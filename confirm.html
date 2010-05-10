@@ -49,96 +49,24 @@
 		{{greeting_content}}
 		</div>
 	<p>	
-	<b><font color="#FFBE73">Last step</font></b>: Please enter your return address <br><font size="2">(so that we can write it on the envelope)</font>
+	<b><font color="#FFBE73">Last step</font></b>: Please enter your email address <br>
 	<div id="returncase">
 	<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/507930858403206" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top" >
-
-	<input id="frname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="frname" value="Name" size="44" STYLE="margin-bottom:2px"/><br>
-
-	<script type="text/javascript"> 
-    var frname = new LiveValidation('frname', {onlyOnSubmit: true });
-		frname.add(Validate.Exclusion, {within: ['Name']})
-        frname.add(Validate.Presence);
-	</script>
-
-	<input id="fraddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="fraddress" value="Address" size="44" STYLE="margin-bottom:2px"/><br>
+	<input id="useremail" onblur="if(this.value == '') { this.value='Your Email'}" onfocus="if (this.value == 'you@email.com') {this.value=''}" type="text" name="useremail" value="you @ email.com" size="45"/><br>
 
 	<script type="text/javascript"> 
-    var fraddress = new LiveValidation('fraddress', {onlyOnSubmit: true });
-		fraddress.add(Validate.Exclusion, {within: ['Address']})
-        fraddress.add(Validate.Presence);
-	</script>
-
-	<input onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="frcity" value="City" size="24"/>
-	<Select name="frstate"><option value="0" selected>State
-	    <option value="AK">AK</option>
-		<option value="AL">AL</option>
-		<option value="AR">AR</option>
-		<option value="AZ">AZ</option>
-		<option value="CA">CA</option>
-		<option value="CO">CO</option>
-		<option value="CT">CT</option>
-		<option value="DC">DC</option>
-		<option value="DE">DE</option>
-		<option value="FL">FL</option>
-		<option value="GA">GA</option>
-		<option value="HI">HI</option>
-		<option value="IA">IA</option>
-		<option value="ID">ID</option>
-		<option value="IL">IL</option>
-		<option value="IN">IN</option>
-		<option value="KS">KS</option>
-		<option value="KY">KY</option>
-		<option value="LA">LA</option>
-		<option value="MA">MA</option>
-		<option value="MD">MD</option>
-		<option value="ME">ME</option>
-		<option value="MI">MI</option>
-		<option value="MN">MN</option>
-		<option value="MO">MO</option>
-		<option value="MS">MS</option>
-		<option value="MT">MT</option>
-		<option value="NC">NC</option>
-		<option value="ND">ND</option>
-		<option value="NE">NE</option>
-		<option value="NH">NH</option>
-		<option value="NJ">NJ</option>
-		<option value="NM">NM</option>
-		<option value="NV">NV</option>
-		<option value="NY">NY</option>
-		<option value="OH">OH</option>
-		<option value="OK">OK</option>
-		<option value="OR">OR</option>
-		<option value="PA">PA</option>
-		<option value="RI">RI</option>
-		<option value="SC">SC</option>
-		<option value="SD">SD</option>
-		<option value="TN">TN</option>
-		<option value="TX">TX</option>
-		<option value="UT">UT</option>
-		<option value="VA">VA</option>
-		<option value="VT">VT</option>
-		<option value="WA">WA</option>
-		<option value="WI">WI</option>
-		<option value="WV">WV</option>
-		<option value="WY">WY</option>
-	</Select>
-
-	<input id="frzip" onblur="if(this.value == '') { this.value='Zip'}" onfocus="if (this.value == 'Zip') {this.value=''}" type="text" name="frzip" value="Zip" size="5"/>
-	<script type="text/javascript"> 
-    var frzip = new LiveValidation('frzip', {onlyOnSubmit: true });
-		frzip.add(Validate.Exclusion, {within: ['Zip']})
-		frzip.add(Validate.Numericality, {onlyInteger:true})
-        frzip.add(Validate.Length, { is: 5 } );
-		frzip.add(Validate.Presence);
+    var useremail = new LiveValidation('useremail', { validMessage: "Thanks!", wait: 500, onlyOnSubmit: true });
+		useremail.add(Validate.Exclusion, {within: ['Your Email']})
+		useremail.add(Validate.Presence );
+        useremail.add(Validate.Email);
 	</script>
 	<p>
-</div>
+	</div>
 
 	<div id="checkout">
 	<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/507930858403206" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
 	    <input name="item_name_1" type="hidden" value="OursTruly Handwritten Note"/>
-	    <input name="item_description_1" type="hidden" value="One human-written note"/>
+	    <input name="item_description_1" type="hidden" value="One handwritten note, shipped to the address you entered at OursTruly.com!"/>
 	    <input name="item_quantity_1" type="hidden" value="1"/>
 	    <input name="item_price_1" type="hidden" value="2.99"/>
 	    <input name="item_currency_1" type="hidden" value="USD"/>
@@ -146,17 +74,18 @@
 		<input type="hidden" name="analyticsdata" value="">
 	    <input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=507930858403206&amp;w=117&amp;h=48&amp;style=white&amp;variant=text&amp;loc=en_US" type="image"/>
 	</form>
-	</div>
 	
+	</div>
+	<font size="2">(make sure to include your return address when you pay)</font>
+	<p>
 	
 </div>
 	<p>
 	<div id="indexfooter">
-	<a href="/">Home</a> <a href="/pages/howitworks.html">How It Works</a> <a href="/pages/about.html">OurStory</a> <a href="/pages/contactus.html">Contact Us</a> <a href="/pages/terms.html">Terms of Service</a>
-	</div>
-	<p>
-	<p>
+	<a href="/">Home</a>&nbsp;&nbsp;&nbsp;<a href="/pages/howitworks.html">How It Works</a>&nbsp;&nbsp;&nbsp;<a href="/pages/contactus.html">Businesses</a>&nbsp;&nbsp;&nbsp;<a href="/pages/about.html">OurStory</a>&nbsp;&nbsp;&nbsp;<a href="/pages/contactus.html">Contact Us</a>&nbsp;&nbsp;&nbsp;<a href="/pages/terms.html">Terms of Service</a>
 	
+	</div>
+
 	
 	
 	<!-- Google Code for Confirm Conversion Page -->

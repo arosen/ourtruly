@@ -12,16 +12,17 @@ a img
 
 #logo
 {
-	margin-left:33%;
+	margin-right:2%;
 }
 #leftcontainer
 {
-	margin-top:100px;
+	margin-top:90px;
 	background-color:#F0F0F0;
 	width:32%;
 	float:left;
 	min-height:200px;
 	text-align:center;
+	margin-left:3%;
 }
 input, textarea, select
 {
@@ -65,7 +66,7 @@ input, textarea, select
 	text-align:left;
 }
 
-#footer, #indexfooter
+#footer, #indexfooter, #howfooter
 {
 	font-size:12;
 	margin-bottom:10px;
@@ -120,7 +121,7 @@ input, textarea, select
 	width:30%;
 	margin:auto;
 	background-color:white;
-	padding:10px;
+	padding:3px;
 	margin-bottom:10px;
 	border: solid #FFBE73;
 }
@@ -183,6 +184,10 @@ input, textarea, select
 	padding-left:15px;
 	padding-right:15px;
 	padding-top:10px;
+}
+#howfooter
+{
+	margin-right:11%;
 }
 /**Contact Us**/
 #contactbox
