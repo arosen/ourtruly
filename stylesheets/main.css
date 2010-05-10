@@ -174,16 +174,16 @@ input, textarea, select
 /**How it Works**/
 #howcontainer
 {
-	width:60%;
+	width:62%;
 }
 
 #howbox
 {
 	font-size:13;
 	text-align:left;
-	padding-left:15px;
-	padding-right:15px;
 	padding-top:10px;
+	padding-left:1%;
+	padding-right:1%;
 }
 #howfooter
 {
