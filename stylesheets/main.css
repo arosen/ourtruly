@@ -12,17 +12,18 @@ a img
 
 #logo
 {
-	margin-right:2%;
+	margin-right:6%;
 }
 #leftcontainer
 {
 	margin-top:90px;
 	background-color:#F0F0F0;
-	width:32%;
+	width:25%;
 	float:left;
 	min-height:200px;
 	text-align:center;
 	margin-left:3%;
+
 }
 input, textarea, select
 {
@@ -33,9 +34,10 @@ input, textarea, select
 
 #container, #howcontainer, #confirmcontainer
 {
-	margin:auto;
 	background-color: #F0F0F0;
-	width:63%;
+	width:50%;
+	min-width:390px;
+	margin-right:20%;
 	float:right;
 	font-size:20;
 }
@@ -174,7 +176,7 @@ input, textarea, select
 /**How it Works**/
 #howcontainer
 {
-	width:60%;
+	width:50%;
 }
 
 #howbox
