@@ -4,3 +4,7 @@ if (BrowserDetect.browser == "Firefox")
 document.writeln('              	<textarea onblur="if(this.value == \'\') { this.value=\'Type your note...\'}" onfocus="if (this.value == \'Type your note...\') {this.value=\'\'}" name="content" rows="9" cols="40" id="content">Type your note...<\/textarea>\n');
 }
 </script>
+
+
+	<textarea onblur="if(this.value == '') { this.value='Type your note...'}" onfocus="if (this.value == 'Type your note...') {this.value=''}" name="content" rows="9" cols="40" id="content" onkeyup="textLimit(this, 1000);">Type your note...</textarea>
+	</div>

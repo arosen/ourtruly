@@ -35,6 +35,19 @@
 	field.value = field.value.substring(0, maxlen);
 	}
 	</script>
+	
+	<script type="text/javascript" src="/js/tiny_mce/tiny_mce.js"></script>
+
+	<script type="text/javascript">
+	tinyMCE.init({
+		mode : "textareas",
+		theme: "advanced",
+		theme_advanced_buttons1 : "",
+		theme_advanced_buttons2 : "",
+		theme_advanced_buttons3 : ""
+		
+	});
+	</script>
 
 </head>
 <body>
@@ -56,10 +69,11 @@
 	<div id="contentcol">
 	<b><font color="#FFBE73">Step 1</b></font>
 	Tell us what to write...<br>
-	<font size=1>Type < p > for a new paragraph</font>
 	<p>
 	<form action="/confirm" name="myform" method="post">	
+	<center>
 	<textarea onblur="if(this.value == '') { this.value='Type your note...'}" onfocus="if (this.value == 'Type your note...') {this.value=''}" name="content" rows="9" cols="40" id="content" onkeyup="textLimit(this, 1000);">Type your note...</textarea>
+	</center>
 	</div>
 
 	<b><font color="#FFBE73">Step 2</b></font> Tell us who to send it to...
@@ -71,7 +85,7 @@
 		toname.add(Validate.Exclusion, {within: ['Name']})
         toname.add(Validate.Presence);
 	</script>
-	<input id="toaddress" onblur="if(this.value == '') { this.value='Address'}" onfocus="if (this.value == 'Address') {this.value=''}" type="text" name="toaddress" value="Address" size="42" STYLE="margin-bottom:2px"/><br>
+	<input id="toaddress" onblur="if(this.value == '') { this.value='Address (incl. PO Box / Apt)'}" onfocus="if (this.value == 'Address (incl. PO Box / Apt)') {this.value=''}" type="text" name="toaddress" value="Address (incl. PO Box / Apt)" size="42" STYLE="margin-bottom:2px"/><br>
 
 	<script type="text/javascript"> 
     var toaddress = new LiveValidation('toaddress', {onlyOnSubmit: true });
@@ -79,8 +93,16 @@
         toaddress.add(Validate.Presence);
 	</script>
 	
-	<input id="tocity" onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="tocity" value="City" size="22"/>
-	<Select name="tostate"><option value="0" selected>State
+	<input id="tocity" onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="tocity" value="City" size="23"/>
+	<script type="text/javascript"> 
+	
+    var tocity = new LiveValidation('tocity', {onlyOnSubmit: true });
+		tocity.add(Validate.Exclusion, {within: ['City']})
+        tocity.add(Validate.Presence);
+	</script>
+	
+	<Select id="tostate" name="tostate">
+		<option value="">State</option>
 	    <option value="AK">AK</option>
 		<option value="AL">AL</option>
 		<option value="AR">AR</option>
@@ -133,6 +155,13 @@
 		<option value="WV">WV</option>
 		<option value="WY">WY</option>
 	</Select>
+	
+	<script type="text/javascript">
+      var tostate = new LiveValidation('tostate', {onlyOnSubmit: true });
+		tostate.add(Validate.Exclusion, {within: ['']})
+        tostate.add(Validate.Presence);
+    </script>
+	
 
 	<input id="tozip" onblur="if(this.value == '') { this.value='Zip'}" onfocus="if (this.value == 'Zip') {this.value=''}" type="text" name="tozip" value="Zip" size="5"/>
 

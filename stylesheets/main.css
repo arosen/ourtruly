@@ -2,7 +2,7 @@ body {
 	font-family: Helvetica, sans-serif;
 	text-align:center;
 	font-size:15;
-	background:#F0F0F0;
+	background:#E8E8E8;
 	color:white;
 }
 a img 
@@ -17,7 +17,6 @@ a img
 #leftcontainer
 {
 	margin-top:90px;
-	background-color:#F0F0F0;
 	width:25%;
 	float:left;
 	min-height:200px;
@@ -34,7 +33,6 @@ input, textarea, select
 
 #container, #howcontainer, #confirmcontainer
 {
-	background-color: #F0F0F0;
 	width:50%;
 	min-width:390px;
 	margin-right:20%;
@@ -62,10 +60,26 @@ input, textarea, select
 .LV_validation_message{
     
     margin:auto;
-	position:absolute;
+	position:relative;
 	font-size:10pt;
-	margin-left:5px;
-	text-align:left;
+	text-align:right;
+	float:none;
+}
+.LV_valid {
+    color:#00CC00;
+}
+	
+.LV_invalid {
+    color:#CC0000;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+	padding:3px;
+    border: 1px solid #CC0000;
 }
 
 #footer, #indexfooter, #howfooter

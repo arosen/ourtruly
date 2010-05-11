@@ -589,7 +589,7 @@ var Validate = {
      */
     Presence: function(value, paramsObj){
       	var paramsObj = paramsObj || {};
-    	var message = paramsObj.failureMessage || "Can't be empty!";
+    	var message = paramsObj.failureMessage || "";
     	if(value === '' || value === null || value === undefined) Validate.fail(message);
     	return true;
     },
@@ -693,7 +693,7 @@ var Validate = {
      */
     Email: function(value, paramsObj){
     	var paramsObj = paramsObj || {};
-    	var message = paramsObj.failureMessage || "Invalid entry";
+    	var message = paramsObj.failureMessage || "";
     	Validate.Format(value, { failureMessage: message, pattern: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i } );
     	return true;
     },
@@ -723,7 +723,7 @@ var Validate = {
         var minimum = ((paramsObj.minimum) || (paramsObj.minimum == 0)) ? paramsObj.minimum : null;
     	var maximum = ((paramsObj.maximum) || (paramsObj.maximum == 0)) ? paramsObj.maximum : null;
     	var is = ((paramsObj.is) || (paramsObj.is == 0)) ? paramsObj.is : null;
-        var wrongLengthMessage = paramsObj.wrongLengthMessage || "Invalid entry";
+        var wrongLengthMessage = paramsObj.wrongLengthMessage || "";
     	var tooShortMessage = paramsObj.tooShortMessage || "Must not be less than " + minimum + " characters long!";
     	var tooLongMessage = paramsObj.tooLongMessage || "Must not be more than " + maximum + " characters long!";
     	switch(true){
@@ -768,7 +768,7 @@ var Validate = {
      */
     Inclusion: function(value, paramsObj){
     	var paramsObj = paramsObj || {};
-    	var message = paramsObj.failureMessage || "Invalid entry";
+    	var message = paramsObj.failureMessage || "";
       var caseSensitive = (paramsObj.caseSensitive === false) ? false : true;
     	if(paramsObj.allowNull && value == null) return true;
       if(!paramsObj.allowNull && value == null) Validate.fail(message);
@@ -815,7 +815,7 @@ var Validate = {
      */
     Exclusion: function(value, paramsObj){
       var paramsObj = paramsObj || {};
-      paramsObj.failureMessage = paramsObj.failureMessage || "Invalid entry";
+      paramsObj.failureMessage = paramsObj.failureMessage || "";
       paramsObj.negate = true;
       Validate.Inclusion(value, paramsObj);
       return true;
