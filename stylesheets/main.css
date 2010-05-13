@@ -10,6 +10,10 @@ a img
 	border: none; 
 }
 
+.wordcount_limit {
+  background-color: red !important;
+}
+
 #logo
 {
 	margin-right:6%;
@@ -61,7 +65,7 @@ input, textarea, select
     
     margin:auto;
 	position:relative;
-	font-size:10pt;
+	font-size:15pt;
 	text-align:right;
 	float:none;
 }

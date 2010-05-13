@@ -40,12 +40,16 @@
 
 	<script type="text/javascript">
 	tinyMCE.init({
-		mode : "textareas",
 		theme: "advanced",
-		plugins : "tabfocus",
+		mode : "textareas",
+		plugins: "tabfocus",
+	  	plugins : "wordcount",
 		theme_advanced_buttons1 : "",
 		theme_advanced_buttons2 : "",
-		theme_advanced_buttons3 : ""
+		theme_advanced_buttons3 : "",
+	  	theme_advanced_statusbar_location : "top",
+		theme_advanced_path : false,
+
 		
 	});
 	</script>
@@ -67,16 +71,16 @@
 <a href="/"><img src='/images/logo.png' height=100px alt="OursTruly"></a>
 </div>
 <div id="shadowbox">
+
 	<div id="contentcol">
 	<b><font color="#FFBE73">Step 1</b></font>
 	Tell us what to write...<br>
 	<p>
 	<form action="/confirm" name="myform" method="post">	
 	<center>
-	<textarea onblur="if(this.value == '') { this.value='Type your note...'}" onfocus="if (this.value == 'Type your note...') {this.value=''}" name="content" rows="9" cols="40" id="content" onkeyup="textLimit(this, 1000);">Type your note...</textarea>
+	<textarea onblur="if(this.value == '') { this.value=''}" onfocus="if (this.value == '') {this.value=''}" name="content" rows="9" cols="40" id="content"></textarea>
 	</center>
 	</div>
-
 	<b><font color="#FFBE73">Step 2</b></font> Tell us who to send it to...
 	<p>    
 	<input id="toname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="toname" value="Name" size="42" STYLE="margin-bottom:2px"/><br>
