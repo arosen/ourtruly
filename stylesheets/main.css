@@ -10,6 +10,10 @@ a img
 	border: none; 
 }
 
+.wordcount_limit {
+  background-color: red !important;
+}
+
 #logo
 {
 	margin-right:6%;
