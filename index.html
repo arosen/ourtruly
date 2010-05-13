@@ -78,14 +78,9 @@
 	<p>
 	<form action="/confirm" name="myform" method="post">	
 	<center>
-	<textarea onblur="if(this.value == '') { this.value='Type your note...'}" onfocus="if (this.value == 'Type your note...') {this.value=''}" name="content" rows="9" cols="40" id="content" onkeyup="textLimit(this, 10);"></textarea>
+	<textarea onblur="if(this.value == '') { this.value=''}" onfocus="if (this.value == '') {this.value=''}" name="content" rows="9" cols="40" id="content"></textarea>
 	</center>
 	</div>
-	<p>
-	<div id="wordcount_limit">
-	Went over
-	</div>
-	<p>
 	<b><font color="#FFBE73">Step 2</b></font> Tell us who to send it to...
 	<p>    
 	<input id="toname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="toname" value="Name" size="42" STYLE="margin-bottom:2px"/><br>

@@ -6,13 +6,7 @@
 	<meta property="og:title" content="Real handwritten notes"/>
 	<meta property="og:site_name" content="OursTruly"/>
 	<meta property="og:image" content="http://www.ourstruly.com/images/logo.png"/>
-	
-	<script type="text/javascript">
-	function show_alert()
-	{
-	alert("Ah, not so fast. We're launching in a few days. Be sure to come back and use coupon 'ajfriends' for a cheaper handwritten card as our thanks for checking out the beta!");
-	}
-	
+		
 	</script>
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
 	<script language="JavaScript" src="/js/livevalidation_standalone.js" type="text/javascript"></script>
@@ -36,7 +30,7 @@
 <body>
 
 <div id="leftcontainer">
-<a href="/">
+<a href="/pages/howitworks.html">
 <img src='/images/howitworks4.png' height=530px alt="How it works">
 </a>
 </div>
@@ -64,11 +58,11 @@
 	<p>	
 	<b><font color="#FFBE73">Last step</font></b>: Please enter your email address <br>
 	<div id="returncase">
-	<form action="" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top" >
-	<input id="useremail" onblur="if(this.value == '') { this.value='Your Email'}" onfocus="if (this.value == 'you@email.com') {this.value=''}" type="text" name="useremail" value="you @ email.com" size="45"/><br>
+	<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/507930858403206" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
+	<input id="useremail" onblur="if(this.value == '') { this.value='you @ email.com'}" onfocus="if (this.value == 'you @ email.com') {this.value=''}" type="text" name="useremail" value="you @ email.com" size="45"/><br>
 
 	<script type="text/javascript"> 
-    var useremail = new LiveValidation('useremail', { validMessage: "Thanks!", wait: 500, onlyOnSubmit: true });
+    var useremail = new LiveValidation('useremail', { validMessage: "", wait: 500, onlyOnSubmit: true });
 		useremail.add(Validate.Exclusion, {within: ['Your Email']})
 		useremail.add(Validate.Presence );
         useremail.add(Validate.Email);
@@ -124,6 +118,7 @@
 	</noscript>
 
 </div>
+
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

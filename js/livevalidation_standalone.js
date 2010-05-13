@@ -673,7 +673,7 @@ var Validate = {
     Format: function(value, paramsObj){
       var value = String(value);
       var paramsObj = paramsObj || {};
-      var message = paramsObj.failureMessage || "Not valid!";
+      var message = paramsObj.failureMessage || "";
       var pattern = paramsObj.pattern || /./;
       var negate = paramsObj.negate || false;
       if(!negate && !pattern.test(value)) Validate.fail(message); // normal
@@ -877,7 +877,7 @@ var Validate = {
 		var paramsObj = paramsObj || {};
 		var against = paramsObj.against || function(){ return true; };
 		var args = paramsObj.args || {};
-		var message = paramsObj.failureMessage || "Not valid!";
+		var message = paramsObj.failureMessage || "";
 	    if(!against(value, args)) Validate.fail(message);
 	    return true;
 	  },
