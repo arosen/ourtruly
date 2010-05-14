@@ -7,11 +7,13 @@ from google.appengine.api import users
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext import db
+from google.appengine.api import mail
+
 
 class Greeting(db.Model):
     author = db.UserProperty()
-    useremail = db.StringProperty(multiline=True)
     content = db.TextProperty()
+    useremail = db.StringProperty(multiline=True)
     toname = db.StringProperty(multiline=True)
     toaddress = db.StringProperty(multiline=True)
     toaddress1 = db.StringProperty(multiline=True)
@@ -31,6 +33,7 @@ class MainPage(webapp.RequestHandler):
 	    def get(self):
 	        greetings_query = Greeting.all().order('-date')
 	        greetings = greetings_query.fetch(10)
+	
 
 	        if users.get_current_user():
 	            url = users.create_logout_url(self.request.uri)
@@ -58,6 +61,7 @@ class Confirm(webapp.RequestHandler):
         greeting.tocity = self.request.get('tocity')
         greeting.tostate = self.request.get('tostate')
         greeting.tozip = self.request.get('tozip')
+        greeting.useremail = self.request.get('useremail')
 
         greeting.fraddress = self.request.get('fraddress')
         greeting.fraddress1 = self.request.get('fraddress1')
@@ -65,6 +69,11 @@ class Confirm(webapp.RequestHandler):
         greeting.frstate = self.request.get('frstate')
         greeting.frzip = self.request.get('frzip')
         greeting.put()
+
+        mail.send_mail(sender="jake@ourstruly.com",
+		              to="talktous@ourstruly.com",
+		              subject="New note from user",
+		              body=greeting.content+"<p>"+greeting.toaddress+"<p>"+greeting.tocity+","+greeting.tostate+" "+greeting.tozip)
 
         content_values = {
             'greeting_content': greeting.content,
@@ -74,6 +83,7 @@ class Confirm(webapp.RequestHandler):
             'greeting_tocity': greeting.tocity,
             'greeting_tostate': greeting.tostate,
             'greeting_tozip': greeting.tozip,
+            'greeting_useremail': greeting.useremail,
 
             'greeting_frname': greeting.frname,
             'greeting_fraddress': greeting.fraddress,
