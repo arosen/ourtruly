@@ -15,7 +15,7 @@ handlers:
   static_dir: pages
 - url: .*
   script: ours-truly.py
-
-
-  
+- url: /remote_api
+  script: $PYTHON_LIB/google/appengine/ext/remote_api/handler.py
+  login: admin
 

@@ -9,7 +9,6 @@
 
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
 	<script language="JavaScript" src="/js/livevalidation_standalone.js" type="text/javascript"></script>
-	<script language="JavaScript" type="text/javascript" src="/js/browserdetect.js"></script>
 
 	<script type="text/javascript" charset="utf-8">
 	  var is_ssl = ("https:" == document.location.protocol);
@@ -18,7 +17,6 @@
 	</script>
 	<script type="text/javascript" charset="utf-8">
 	  var feedback_widget_options = {};
-
 	  feedback_widget_options.display = "overlay";  
 	  feedback_widget_options.company = "ourstruly";
 	  feedback_widget_options.placement = "right";
@@ -49,8 +47,6 @@
 		theme_advanced_buttons3 : "",
 	  	theme_advanced_statusbar_location : "top",
 		theme_advanced_path : false,
-
-		
 	});
 	</script>
 
@@ -75,12 +71,12 @@
 	<div id="contentcol">
 	<b><font color="#FFBE73">Step 1</b></font>
 	Tell us what to write...<br>
-	<font size=2>(Keep it short and sweet for now (under 100 words) <br>We won't be able to fit it on the card otherwise)</font>
+	<font size=2>Keep it short and sweet <font color="#FFBE73">(under 100 words)</font>, otherwise it won't fit on the card</font>
 	
 	<p>
 	<form action="/confirm" name="myform" method="post">	
 	<center>
-	<textarea onblur="if(this.value == '') { this.value=''}" onfocus="if (this.value == '') {this.value=''}" name="content" rows="9" cols="40" id="content"></textarea>
+	<textarea onblur="if(this.value == '') { this.value=''}" onfocus="if (this.value == '') {this.value=''}" name="content" rows="9" cols="40" id="content">{{greeting_content}}</textarea>
 	</center>
 	</div>
 	<b><font color="#FFBE73">Step 2</b></font> Tell us who to send it to...

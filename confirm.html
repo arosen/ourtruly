@@ -35,12 +35,10 @@
 </a>
 </div>
 
-<div id="logo">
-<a href="/"><img src='/images/logo.png' height=100px alt="OursTruly"></a>
-</div>
-<p>	
-
 <div id="confirmcontainer">
+	<div id="logo">
+	<a href="/"><img src='/images/logo.png' height=100px alt="OursTruly"></a>
+	</div>
 	<div id="confirmbox">
 	<p>
 	<b>We're going to send a <font color="#FFBE73">handwritten note</font> to:</b>
@@ -56,11 +54,70 @@
 		{{greeting_content}}
 		</div>
 	<p>	
-	<b><font color="#FFBE73">Last step</font></b>: Please enter your email address <br>
+	<b><font color="#FFBE73">Last step</font></b>: Tell us who it's from... <br>
 	<div id="returncase">
-	<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/507930858403206" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
-	<input id="useremail" onblur="if(this.value == '') { this.value='you @ email.com'}" onfocus="if (this.value == 'you @ email.com') {this.value=''}" type="text" name="useremail" value="you @ email.com" size="45"/><br>
-
+	
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+	<p>    
+	<input id="frname" onblur="if(this.value == '') { this.value='Name'}" onfocus="if (this.value == 'Name') {this.value=''}" type="text" name="frname" value="Name" size="42" STYLE="margin-bottom:2px"/><br>
+	<input id="fraddress" onblur="if(this.value == '') { this.value='Address (incl. PO Box / Apt)'}" onfocus="if (this.value == 'Address (incl. PO Box / Apt)') {this.value=''}" type="text" name="fraddress" value="Address (incl. PO Box / Apt)" size="42" STYLE="margin-bottom:2px"/><br>
+	<input id="frcity" onblur="if(this.value == '') { this.value='City'}" onfocus="if (this.value == 'City') {this.value=''}" type="text" name="frcity" value="City" size="23"/>
+	<Select id="tostate" name="tostate">
+		<option value="">State</option>
+	    <option value="AK">AK</option>
+		<option value="AL">AL</option>
+		<option value="AR">AR</option>
+		<option value="AZ">AZ</option>
+		<option value="CA">CA</option>
+		<option value="CO">CO</option>
+		<option value="CT">CT</option>
+		<option value="DC">DC</option>
+		<option value="DE">DE</option>
+		<option value="FL">FL</option>
+		<option value="GA">GA</option>
+		<option value="HI">HI</option>
+		<option value="IA">IA</option>
+		<option value="ID">ID</option>
+		<option value="IL">IL</option>
+		<option value="IN">IN</option>
+		<option value="KS">KS</option>
+		<option value="KY">KY</option>
+		<option value="LA">LA</option>
+		<option value="MA">MA</option>
+		<option value="MD">MD</option>
+		<option value="ME">ME</option>
+		<option value="MI">MI</option>
+		<option value="MN">MN</option>
+		<option value="MO">MO</option>
+		<option value="MS">MS</option>
+		<option value="MT">MT</option>
+		<option value="NC">NC</option>
+		<option value="ND">ND</option>
+		<option value="NE">NE</option>
+		<option value="NH">NH</option>
+		<option value="NJ">NJ</option>
+		<option value="NM">NM</option>
+		<option value="NV">NV</option>
+		<option value="NY">NY</option>
+		<option value="OH">OH</option>
+		<option value="OK">OK</option>
+		<option value="OR">OR</option>
+		<option value="PA">PA</option>
+		<option value="RI">RI</option>
+		<option value="SC">SC</option>
+		<option value="SD">SD</option>
+		<option value="TN">TN</option>
+		<option value="TX">TX</option>
+		<option value="UT">UT</option>
+		<option value="VA">VA</option>
+		<option value="VT">VT</option>
+		<option value="WA">WA</option>
+		<option value="WI">WI</option>
+		<option value="WV">WV</option>
+		<option value="WY">WY</option>
+	</Select>
+	<input id="frzip" onblur="if(this.value == '') { this.value='Zip'}" onfocus="if (this.value == 'Zip') {this.value=''}" type="text" name="frzip" value="Zip" size="5" STYLE="margin-bottom:3px"/>	
+	<input id="useremail" onblur="if(this.value == '') { this.value='you @ email.com (required)'}" onfocus="if (this.value == 'you @ email.com (required)') {this.value=''}" type="text" name="useremail" value="you @ email.com (required)" size="42"/><br>
 	<script type="text/javascript"> 
     var useremail = new LiveValidation('useremail', { validMessage: "", wait: 500, onlyOnSubmit: true });
 		useremail.add(Validate.Exclusion, {within: ['Your Email']})
@@ -72,66 +129,25 @@
 	<font color="#FFBE73"><b>Pay</b></font> just $2.99
 	<p>
 	<div id="checkout">
-	    <input name="item_name_1" type="hidden" value="OursTruly Handwritten Note (including postage and stationery)"/>
-	    <input name="item_description_1" type="hidden" value="One handwritten note, shipped to the address you entered at OursTruly.com!"/>
-	    <input name="item_quantity_1" type="hidden" value="1"/>
-	    <input name="item_price_1" type="hidden" value="2.99"/>
-	    <input name="item_currency_1" type="hidden" value="USD"/>
-	    <input name="_charset_" type="hidden" value="utf-8"/>
-		<input type="hidden" name="analyticsdata" value="">
-	    <input onclick="show_alert()" value="Show alert box" alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=507930858403206&amp;w=117&amp;h=48&amp;style=white&amp;variant=text&amp;loc=en_US" type="image"/>
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="9266EBAVQ2EVG">
+	<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" onClick="javascript: pageTracker._trackPageview(’/outgoing/paypal.com’);" border="0"  name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 	</form>
-	
-	
 	</div>
-	<font size="2">(make sure to include your return address when you pay)</font>
 	<p>
-	
-</div>
+	</div>
 	<p>
-	<div id="footer">
+	<div id="indexfooter">
 	<a href="/">Home</a>&nbsp;&nbsp;&nbsp;<a href="/pages/howitworks.html">How It Works</a>&nbsp;&nbsp;&nbsp;<a href="/pages/contactus.html">Businesses</a>&nbsp;&nbsp;&nbsp;<a href="/pages/about.html">OurStory</a>&nbsp;&nbsp;&nbsp;<a href="/pages/contactus.html">Contact Us</a>&nbsp;&nbsp;&nbsp;<a href="/pages/terms.html">Terms of Service</a>
 	<p>
+	</div>
 	<a href="http://twitter.com/home?status=Send a real handwritten note at http://www.ourstruly.com. Easy way to be authentic and show someone you care!" title="Click to share this site on Twitter"><img src="/images/twitter.png" width=30px></a>
 	&nbsp;<iframe src="http://www.facebook.com/plugins/like.php?href=http%253A%252F%252Fwww.ourstruly.com&amp;layout=button_count&amp;show_faces=true&amp;width=100&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:25px;" allowTransparency="true"></iframe></a>
 	</div>
-
 	
 	
-	<!-- Google Code for Confirm Conversion Page -->
-	<script type="text/javascript">
-	<!--
-	var google_conversion_id = 1020275799;
-	var google_conversion_language = "en";
-	var google_conversion_format = "1";
-	var google_conversion_color = "ffffff";
-	var google_conversion_label = "ThlvCLGc2QEQ19jA5gM";
-	var google_conversion_value = 0;
-	//-->
-	</script>
-	<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
-	</script>
-	<noscript>
-	<div style="display:inline;">
-	<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1020275799/?label=ThlvCLGc2QEQ19jA5gM&amp;guid=ON&amp;script=0"/>
-	</div>
-	</noscript>
 
-</div>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-16224375-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-
-<script src="http://checkout.google.com/files/digital/ga_post.js"
-  type="text/javascript">
-</script>
 
 </body>
 </html>
